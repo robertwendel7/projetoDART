@@ -1,4 +1,7 @@
-// import 'dart:io';
+
+import 'dart:async';
+import 'dart:collection';
+import 'dart:io';
 
 void main(){
   int dia = 3;
@@ -105,8 +108,32 @@ for(int i = 1; i <= 10; i++){
 /* Q24 */
 
 
+var contador = 0;
 
+while(true) {
+   stdout.write('Digite um número: ');
+   int? numero = int.tryParse(stdin.readLineSync()!);
 
+   if(numero == null){
+    print('Entrada invalida.');
+
+   }
+
+   if(numero < 0){
+    break;
+   }
+
+   contador++;
+
+}
+
+/* Q25 */
+
+List<String> nomes = ['Robert, Raul, Jefferson, Hyago, Hugo'];
+
+for(var nome in nomes){
+  print(nome.toUpperCase());
+}
 
 
 
